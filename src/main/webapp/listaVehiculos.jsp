@@ -18,13 +18,16 @@
 </head>
 <body>
     <h1>Vehiculos</h1>
+    <a href="vehNuevo.html">nuevo vehículo</a>
+    <a href="vehBorrarTodos.jsp">eliminar todos</a>
+    <br>
     <table border="5px">
         <tr>
             <th>Matricula</th>
             <th>Marca</th>
             <th>Modelo</th>
             <th>Color</th>
-            
+            <th>Revisado</th>
         </tr>
             <%
 
@@ -37,9 +40,9 @@
                     out.print("<td>" + vehiculo.getModelo() + "</td>");
                     out.print("<td>" + vehiculo.getColor() + "</td>");
                     out.print("<td>" + vehiculo.getRevisado() + "</td>");
-                    out.print("<td><a href=\".jsp?isbn=" + vehiculo.getMatricula() + "\">revisar</a></td>");
-                    out.print("<td><a href=\".jsp?isbn=" + vehiculo.getMatricula() + "\">editar</a></td>");
-                    out.print("<td><a href=\".jsp?isbn=" + vehiculo.getMatricula() + "\">eliminar</a></td>");
+                    out.print("<td><a href=\"vehRevisar.jsp?matricula=" + vehiculo.getMatricula() + "\">revisar</a></td>");
+                    out.print("<td><a href=\"vehEditar.jsp?matricula=" + vehiculo.getMatricula() + "\">editar</a></td>");
+                    out.print("<td><a href=\"vehEliminar.jsp?matricula=" + vehiculo.getMatricula() + "\">eliminar</a></td>");
                     out.print("</tr>");
                 }
             %>

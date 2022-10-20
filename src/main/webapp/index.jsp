@@ -8,8 +8,9 @@
 <%@page session="true" %>
 
 <%
-  Vehiculo vehiculo = new Vehiculo();
+  Vehiculo vehiculo = new Vehiculo("1234ABC","Seat","Leon","Blanco");
   List<Vehiculo> vehiculos = new ArrayList<Vehiculo>();
+  vehiculos.add(vehiculo);
   session.setAttribute("vehiculos", vehiculos);
 
 %>
